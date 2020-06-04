@@ -1,0 +1,17 @@
+Algae -> prawn -> trout -> kingfisher -> snake
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <button (click)="buyAlgaePlanter()">Buy 1</button>
+        </div>
+        <div class="col-sm">
+            <div class="container">
+                <div *ngFor="let resource of resourceTypes" class="row">
+                    <div *ngIf="resources.get(resource)?.count != 0">{{resource}}: {{resources.get(resource).count}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
